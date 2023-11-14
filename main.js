@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", main);
 
 function main() {
-  //renderScene();
+   //renderScene();
 }
 
-console.log("Hej jag heter Linus")
+console.log("Hej jag heter Linus");
