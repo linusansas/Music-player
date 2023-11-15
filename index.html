@@ -12,32 +12,37 @@
    <link rel="preconnect" href="https://fonts.googleapis.com" />
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"/>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
    
-   <body>
+<body>
 
-      <div class="music-player">
-      
-         <h1 class="music-name">Liminal Moments</h1>
-         <p class="artist-name">Easemind</p>
-      
-         <div class="disk"></div>
+   <audio src="" id="audio"></audio>
 
-         <div class="song-slider">
-            <input type="range" value="0" class="seek-bar">
-            <span class="current-time">00:00</span>
-            <span class="song-duration">00:00</span>
-         </div>
-
-         <div class="controls">
-               <button class="play-btn pause">
-                  <span></span>
-                  <span></span>
-               </button>
-         </div>
-
-      </div>
+   <div class="music-player">
    
-   </body>
+      <h1 class="music-name">Liminal Moments</h1>
+      <p class="artist-name">Easemind</p>
+   
+      <div class="disk"></div>
+
+      <div class="song-slider">
+         <input type="range" value="0" class="seek-bar">
+         <span class="current-time">00:00</span>
+         <span class="song-duration">00:00</span>
+      </div>
+
+      <div class="controls">
+         <button class="btn backward-btn"><span class="material-symbols-outlined">arrow_back_ios_new</span></button>   
+         <button class="play-btn pause">
+            <span></span>
+            <span></span>
+         </button>
+         <button class="btn forward-btn"><span class="material-symbols-outlined">arrow_forward_ios</span></button>   
+      </div>
+
+   </div>
+
+</body>
 
 </html>
