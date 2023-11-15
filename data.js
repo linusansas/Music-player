@@ -1,9 +1,9 @@
 let songs = [
    {
-      name: "song 1",
+      name: "Liminal Moments",
       path: "music/song1.mp3",
-      artist: "artist 1",
-      cover: "images/cover1.png",
+      artist: "Easemind",
+      cover: "images/Liminal moments.png",
    },
    {
       name: "song 2",
