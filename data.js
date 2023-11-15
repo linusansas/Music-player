@@ -9,12 +9,12 @@ let songs = [
       name: "City Escape",
       path: "music/city-escape.aif",
       artist: "Easemind",
-      cover: "images/city-espape.png",
+      cover: "images/city-escape.png",
    },
    {
       name: "song 3",
       path: "music/song3.mp3",
-      artist: "artist 3",
+      artist: "Easemind",
       cover: "images/cover3.png",
    },
 ];

@@ -79,7 +79,6 @@ body {
 }
 
 .seek-bar{
-   -webkit-appearance: none;
    width: 100%;
    height: 5px;
    border-radius: 10px;
@@ -89,7 +88,6 @@ body {
 }
 
 .seek-bar::-webkit-slider-thumb {
-   -webkit-appearance: none;
    width: 5px;
    height: 12px;
    border-radius: 10px;
@@ -184,11 +182,11 @@ body {
    cursor: pointer;
 }
 
-@keyframes rotate{
-   0{
-      transform: rotate(0);
+@keyframes rotate {
+   0% {
+     transform: rotate(0);
    }
-   100%{
-      transform: rotate(360deg);
+   100% {
+     transform: rotate(360deg);
    }
-}
+ }

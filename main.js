@@ -22,7 +22,7 @@ const backwardBtn = document.querySelector('.backward-btn');
 const playBtn = document.querySelector('.play-btn');
 const forwardBtn = document.querySelector('.forward-btn');
 
-// Arrowfunktion - lägger till / tar bort classen pause och play till divarna 
+// lägger till / tar bort class för pause och play till divarna 
 
 playBtn.addEventListener('click', () => {
    
@@ -38,7 +38,7 @@ playBtn.addEventListener('click', () => {
    disk.classList.toggle('play');
 })
 
-// Musiksetup
+// Musik setup
 
 const setMusic = (i) => {
    seekBar.value = 0;
