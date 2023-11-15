@@ -1,15 +1,15 @@
 let songs = [
    {
       name: "Liminal Moments",
-      path: "music/song1.mp3",
+      path: "music/liminal-moments.wav",
       artist: "Easemind",
-      cover: "images/Liminal moments.png",
+      cover: "images/liminal-moments.png",
    },
    {
-      name: "song 2",
-      path: "music/song2.mp3",
-      artist: "artist 2",
-      cover: "images/cover2.png",
+      name: "City Escape",
+      path: "music/city-escape.aif",
+      artist: "Easemind",
+      cover: "images/city-espape.png",
    },
    {
       name: "song 3",
@@ -18,3 +18,4 @@ let songs = [
       cover: "images/cover3.png",
    },
 ];
+

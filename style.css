@@ -16,10 +16,10 @@ body {
 
 .music-player {
    width: 350px;
-   height: 550px;
+   height: 575px;
    border-radius: 20px;
    background: rgba(255, 255, 255, 0.08);
-   box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+   box-shadow: 0 35px 100px rgba(255, 255, 255, 0.1);
    padding: 30px;
    overflow: hidden;
    color: #d5eebb;
@@ -50,7 +50,7 @@ body {
    height: 180px;
    border-radius: 50%;
    background: #000;
-   background-image: url('images/liminal\ moments.png');
+   background-image: url('images/liminal-moments.png');
    background-size: cover;
    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
    animation: rotate 20s linear infinite;
