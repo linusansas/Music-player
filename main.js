@@ -22,14 +22,23 @@ const backwardBtn = document.querySelector('.backward-btn');
 const playBtn = document.querySelector('.play-btn');
 const forwardBtn = document.querySelector('.forward-btn');
 
-//arrowfunktion - lägger till / tar bort classen pause och play till divarna 
+// Arrowfunktion - lägger till / tar bort classen pause och play till divarna 
 
 playBtn.addEventListener('click', () => {
+   
+   if(playBtn.className.includes('pause')){
+      music.play();
+   } 
+   
+   else {
+      music.pause();
+   }
+
    playBtn.classList.toggle('pause');
    disk.classList.toggle('play');
 })
 
-//Musiksetup
+// Musiksetup
 
 const setMusic = (i) => {
    seekBar.value = 0;
@@ -49,3 +58,24 @@ const setMusic = (i) => {
 }
 
 setMusic(0);
+
+// formaterar tid till minuter och sekunder
+
+const formatTime = (time) => {
+   let min = Math.floor(time / 60);
+   if(min < 10){
+      min = `0${min}`;
+   }
+   let sec = Math.floor(time % 60);
+   if(sec < 10){
+      sec = `0${sec}`;
+   }
+   return `${min} : ${sec}`;
+}
+
+// seekBar
+
+setInterval(() => {
+   seekBar.value = music.currentTime;
+   currentTime.innerHTML = formatTime(music.currentTime);
+}, 500)
