@@ -1,17 +1,32 @@
 window.addEventListener("DOMContentLoaded", main);
 
 function main() {
-   // ???
+   setMusic();
 }
 
 //Variabler för att hämta från DOMen
 
-let currentMusic = 0;
+/**
+ * Retrieves the initial value for the current music from local storage.
+ * @function
+ * @returns {number} The initial value for the current music.
+ * @example
+ * // Usage example:
+ * const initialCurrentMusic = getInitialCurrentMusic();
+ * console.log(initialCurrentMusic); // Output: 0
+*/
+
+function getInitialCurrentMusic(){
+   return localStorage.getItem("storedCurrentMusic") || 0;
+}
+
+let currentMusic = getInitialCurrentMusic();
 
 const music = document.querySelector('#audio');
 
 const songName = document.querySelector('.music-name');
-const artistName = document.querySelector('.artist-name')
+const artistName = document.querySelector('.artist-name');
+const songStory = document.querySelector('.song-story');
 
 const disk = document.querySelector('.disk');
 const seekBar = document.querySelector('.seek-bar');
@@ -40,14 +55,16 @@ playBtn.addEventListener('click', () => {
 
 // Musik setup
 
-const setMusic = (i) => {
+
+
+function setMusic() {
    seekBar.value = 0;
-   let song = songs[i];
-   currentMusic = i;
+   const song = songs[currentMusic];
    music.src = song.path;
 
    songName.innerHTML = song.name;
    artistName.innerHTML = song.artist;
+   songStory.innerHTML = song.story;
    disk.style.backgroundImage = `url(${song.cover})`;
 
    currentTime.innerHTML = '00:00';
@@ -55,13 +72,23 @@ const setMusic = (i) => {
       seekBar.max = music.duration;
       musicDuration.innerHTML = formatTime(music.duration);
    }, 300);
+   localStorage.setItem("storedCurrentMusic", currentMusic)
 }
-
-setMusic(0);
 
 // formaterar tid till minuter och sekunder
 
-const formatTime = (time) => {
+/**
+ * Formats time into a string representation in the format 'mm:ss'.
+ * @param {number} time - The time value in seconds.
+ * @returns {string} A formatted time string in the 'mm:ss' format.
+ * @example
+ * // Usage example:
+ * const timeInSeconds = 125;
+ * const formattedTime = formatTime(timeInSeconds);
+ * console.log(formattedTime); // Output: '02:05'
+ */
+
+function formatTime(time) {
    let min = Math.floor(time / 60);
    if(min < 10){
       min = `0${min}`;
@@ -73,7 +100,7 @@ const formatTime = (time) => {
    return `${min} : ${sec}`;
 }
 
-// seekBar
+// slider
 
 setInterval(() => {
    seekBar.value = music.currentTime;
@@ -93,7 +120,7 @@ const playMusic = () => {
    disk.classList.add('play');
 }
 
-// Backward and forwards functions
+// Byt låt funktioner
 
 forwardBtn.addEventListener('click', () => {
    if(currentMusic >= songs.length - 1){
@@ -102,7 +129,7 @@ forwardBtn.addEventListener('click', () => {
    else{
       currentMusic++;
    }
-   setMusic(currentMusic);
+   setMusic();
    playMusic();
 })
 
@@ -113,6 +140,6 @@ backwardBtn.addEventListener('click', () => {
    else{
       currentMusic--;
    }
-   setMusic(currentMusic);
+   setMusic();
    playMusic();
 })

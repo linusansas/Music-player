@@ -1,21 +1,23 @@
-let songs = [
+const songs = [
    {
-      name: "Liminal Moments",
+      name: "Liminal moments",
       path: "music/liminalmoments.mp3",
       artist: "Easemind",
       cover: "images/liminal-moments.png",
+      story: "2021"
    },
    {
-      name: "City Escape",
+      name: "City escape",
       path: "music/cityescape.mp3",
       artist: "Easemind",
       cover: "images/city-escape.png",
+      story: "2019"
    },
    {
-      name: "song 3",
-      path: "music/song3.mp3",
+      name: "Late nights",
+      path: "music/latenights.mp3",
       artist: "Easemind",
-      cover: "images/cover3.png",
+      cover: "images/late-nights.png",
+      story: "2018"
    },
 ];
-

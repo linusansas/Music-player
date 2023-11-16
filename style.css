@@ -10,7 +10,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   background: #011F26;
+   background: url('images/background1.png') center/cover no-repeat;
    font-family: "Montserrat", sans-serif;
 }
 
@@ -18,17 +18,19 @@ body {
    width: 350px;
    height: 550px;
    border-radius: 20px;
-   background: rgba(255, 255, 255, 0.08);
-   box-shadow: 0 35px 100px rgba(255, 255, 255, 0.1);
+   background: rgba(26, 32, 43, 0.95);
+   box-shadow: 0 35px 100px rgba(247, 225, 152, 0.576);
    padding: 30px;
    overflow: hidden;
-   color: #d5eebb;
+   color: #F7EBC9;
+
+   
 }
 
 .music-name,
-.artist-name {
+.artist-name,
+.song-story {
    text-align: center;
-   text-transform: capitalize;
    margin-top: 15px;
 }
 
@@ -36,11 +38,17 @@ body {
    font-size: 25px;
    font-weight: 500;
    margin-bottom: 10px;
+   text-transform: capitalize;
 }
 
 .artist-name {
    font-size: 20px;
    color: #F2A71B;
+}
+
+.song-story {
+   font-size: 11px;
+   font-weight: regular;
 }
 
 .disk {
@@ -53,7 +61,7 @@ body {
    background: #000;
    background-image: url('images/liminal-moments.png');
    background-size: cover;
-   box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
+   box-shadow: 0 0 0 10px rgba(240, 220, 179, 0.05);
    animation: rotate 20s linear infinite;
    animation-play-state: paused;
 }
@@ -71,7 +79,7 @@ body {
    width: 30px;
    height: 30px;
    border-radius: 50%;
-   background: #025E73;
+   background: #282C32;
 }
 
 .song-slider{
@@ -83,10 +91,11 @@ body {
    width: 100%;
    height: 5px;
    border-radius: 10px;
-   background: #d5eebb;
+   background: #F7EBC9;
    overflow: hidden;
    cursor: pointer;
    -webkit-appearance: none;
+   appearance: none;
 }
 
 .seek-bar::-webkit-slider-thumb {
@@ -122,7 +131,7 @@ body {
    width: 60px;
    height: 60px;
    border-radius: 50%;
-   background: #d5eebb;
+   background: #F7EBC9;
    cursor: pointer;
    border: none;
 }
@@ -176,7 +185,7 @@ body {
 .btn{
    width: 40px;
    height: 40px;
-   background: #d5eebb;
+   background: #F7EBC9;
    border-radius: 50%;
    display: flex;
    justify-content: center;
