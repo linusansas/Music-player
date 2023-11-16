@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", main);
 
 function main() {
-   //renderScene();
+   // ???
 }
 
 //Variabler för att hämta från DOMen
@@ -78,4 +78,41 @@ const formatTime = (time) => {
 setInterval(() => {
    seekBar.value = music.currentTime;
    currentTime.innerHTML = formatTime(music.currentTime);
+   if(Math.floor(music.currentTime) == Math.floor(seekBar.max)){
+      forwardBtn.click();
+   }
 }, 500)
+
+seekBar.addEventListener('change', () => {
+   music.currentTime = seekBar.value;
+})
+
+const playMusic = () => {
+   music.play();
+   playBtn.classList.remove('pause');
+   disk.classList.add('play');
+}
+
+// Backward and forwards functions
+
+forwardBtn.addEventListener('click', () => {
+   if(currentMusic >= songs.length - 1){
+      currentMusic = 0;
+   }
+   else{
+      currentMusic++;
+   }
+   setMusic(currentMusic);
+   playMusic();
+})
+
+backwardBtn.addEventListener('click', () => {
+   if(currentMusic <= 0){
+      currentMusic = songs.length - 1;
+   }
+   else{
+      currentMusic--;
+   }
+   setMusic(currentMusic);
+   playMusic();
+})

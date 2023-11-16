@@ -16,7 +16,7 @@ body {
 
 .music-player {
    width: 350px;
-   height: 575px;
+   height: 550px;
    border-radius: 20px;
    background: rgba(255, 255, 255, 0.08);
    box-shadow: 0 35px 100px rgba(255, 255, 255, 0.1);
@@ -29,10 +29,11 @@ body {
 .artist-name {
    text-align: center;
    text-transform: capitalize;
+   margin-top: 15px;
 }
 
 .music-name {
-   font-size: 40px;
+   font-size: 25px;
    font-weight: 500;
    margin-bottom: 10px;
 }
@@ -82,9 +83,10 @@ body {
    width: 100%;
    height: 5px;
    border-radius: 10px;
-   background: #BFB78F;
+   background: #d5eebb;
    overflow: hidden;
    cursor: pointer;
+   -webkit-appearance: none;
 }
 
 .seek-bar::-webkit-slider-thumb {
@@ -93,6 +95,7 @@ body {
    border-radius: 10px;
    background-color: #000;
    box-shadow: -400px 0 0 400px #F2A71B;
+   -webkit-appearance: none;
 }
 
 .current-time,
@@ -163,10 +166,10 @@ body {
       box-shadow: 0;
    }
    50%{
-      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
    }
    100%{
-      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0);
    }
 }
 
