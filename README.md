@@ -13,13 +13,12 @@ En minimalistisk webbapplikation för att spela musik med ett visuellt gränssni
 - HTML, CSS, JavaScript
 - Använder [Montserrat](https://fonts.google.com/specimen/Montserrat) och [Material Symbols Outlined](https://fonts.google.com/specimen/Material+Symbols+Outlined) från Google Fonts.
 
-## Installation
+## Installation & demo
 
-1. Klona projektet: `git clone <https://github.com/linusansas/Music-player.git>`
-2. Öppna `index.html` i en webbläsare.
+1. Klona projektet via: `git clone <https://github.com/linusansas/Music-player.git>`
+2. Demo-länk: https://linusansas.github.io/Music-player/
 
 ## Användning
 
-- Öppna den lokala filen `index.html` i din webbläsaren
 - Klicka på play-knappen för att starta musiken
 - Använd kontrollerna för att styra uppspelningen och se låtinformationen
