@@ -4,8 +4,6 @@ function main() {
    setMusic();
 }
 
-//Variabler för att hämta från DOMen
-
 /**
  * Retrieves the initial value for the current music from local storage.
  * @function
@@ -53,9 +51,10 @@ playBtn.addEventListener('click', () => {
    disk.classList.toggle('play');
 })
 
-// Musik setup
-
-
+/**
+ * Sets music information and properties based on the current music.
+ * @function
+ */
 
 function setMusic() {
    seekBar.value = 0;
@@ -74,8 +73,6 @@ function setMusic() {
    }, 300);
    localStorage.setItem("storedCurrentMusic", currentMusic)
 }
-
-// formaterar tid till minuter och sekunder
 
 /**
  * Formats time into a string representation in the format 'mm:ss'.

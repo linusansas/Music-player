@@ -15,7 +15,7 @@ En minimalistisk webbapplikation för att spela musik med ett visuellt gränssni
 
 ## Installation
 
-1. Klona projektet: `git clone <projektets repo-url>`
+1. Klona projektet: `git clone <https://github.com/linusansas/Music-player.git>`
 2. Öppna `index.html` i en webbläsare.
 
 ## Användning
