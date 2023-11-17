@@ -35,7 +35,7 @@ const backwardBtn = document.querySelector('.backward-btn');
 const playBtn = document.querySelector('.play-btn');
 const forwardBtn = document.querySelector('.forward-btn');
 
-// lägger till / tar bort class för pause och play till divarna 
+// toggle pause and play classes to divs
 
 playBtn.addEventListener('click', () => {
    
@@ -51,10 +51,7 @@ playBtn.addEventListener('click', () => {
    disk.classList.toggle('play');
 })
 
-/**
- * Sets music information and properties based on the current music.
- * @function
- */
+// Music Setup
 
 function setMusic() {
    seekBar.value = 0;
@@ -97,7 +94,7 @@ function formatTime(time) {
    return `${min} : ${sec}`;
 }
 
-// slider
+// slider setup
 
 setInterval(() => {
    seekBar.value = music.currentTime;
@@ -117,7 +114,7 @@ const playMusic = () => {
    disk.classList.add('play');
 }
 
-// Byt låt funktioner
+// Change song functions
 
 forwardBtn.addEventListener('click', () => {
    if(currentMusic >= songs.length - 1){
